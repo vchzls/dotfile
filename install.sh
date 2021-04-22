@@ -18,14 +18,14 @@ else
 	cp -f .tmux.conf $HOME/
 fi
 
-if [ ! -f "$HOME/.bashrc" ]; then
-	printf "\033[36mCreate new bashrc!\033[0m\n"
-	cp -f sh/bashrc.sh $HOME/.bashrc
+if [ ! -f "$HOME/.zshrc" ]; then
+	printf "\033[36mCreate new zshrc!\033[0m\n"
+	cp -f sh/zshrc.sh $HOME/.zshrc
 else
-	printf "\032[36mExisting bashrc!\033[0m\n"
-	printf "\033[36mMove bashrc to bashrc.backup!\033[0m\n"
-    mv $HOME/.bashrc $HOME/.bashrc.backup
-	cp -f sh/bashrc.sh $HOME/.bashrc
+	printf "\032[36mExisting zshrc!\033[0m\n"
+	printf "\033[36mMove zshrc to zshrc.backup!\033[0m\n"
+    mv $HOME/.zshrc $HOME/.zshrc.backup
+	cp -f sh/zshrc.sh $HOME/.zshrc
 fi
 
 if [ ! -d "$HOME/.config/sh" ]; then
@@ -35,7 +35,6 @@ fi
 
 cp -r sh/aliases.sh $HOME/.config/sh
 cp -r sh/python.sh $HOME/.config/sh
-cp -r sh/simple_prompt.sh $HOME/.config/sh
-cp -r sh/fish_prompt.sh $HOME/.config/sh
+cp -r sh/p10k.zsh $HOME/.config/sh
 
 exit 0;
