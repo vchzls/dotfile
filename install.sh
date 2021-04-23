@@ -1,3 +1,5 @@
+chsh -s $(which zsh)
+
 CDIR="$(dirname "$(readlink -f "$0")")"
 printf "Current dir is $CDIR\n"
 
