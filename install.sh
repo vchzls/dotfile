@@ -44,10 +44,11 @@ cp -r sh/p10k.zsh $HOME/.config/sh
 if [ ! -d "$HOME/.config/nvim" ]; then
 	printf "\033[36mCreate .config/nvim !\033[0m\n"
 else
-	printf "\032[36mExisting .config/nvim !\033[0m\n"
+	printf "\033[36mExisting .config/nvim !\033[0m\n"
 	printf "\033[36mMove .config/nvim to .config/nvim.backup!\033[0m\n"
 	mv $HOME/.config/nvim $HOME/.config/nvim.backup
-	cp -r nvim $HOME/.config
 fi
+mkdir -p $HOME/.config/nvim
+cp -r nvim $HOME/.config/
 
 exit 0;
