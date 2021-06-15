@@ -1,3 +1,4 @@
+#!/bin/bash
 chsh -s $(which zsh)
 
 CDIR="$(dirname "$(readlink -f "$0")")"
@@ -24,19 +25,29 @@ if [ ! -f "$HOME/.zshrc" ]; then
 	printf "\033[36mCreate new zshrc!\033[0m\n"
 	cp -f sh/zshrc.sh $HOME/.zshrc
 else
-	printf "\032[36mExisting zshrc!\033[0m\n"
+	printf "\033[36mExisting zshrc!\033[0m\n"
 	printf "\033[36mMove zshrc to zshrc.backup!\033[0m\n"
     mv $HOME/.zshrc $HOME/.zshrc.backup
 	cp -f sh/zshrc.sh $HOME/.zshrc
 fi
 
 if [ ! -d "$HOME/.config/sh" ]; then
-	printf "\033[36mCreate .config/sh!\033[0m\n"
+	printf "\033[36mCreate .config/sh !\033[0m\n"
 	mkdir -p $HOME/.config/sh
 fi
 
 cp -r sh/aliases.sh $HOME/.config/sh
 cp -r sh/python.sh $HOME/.config/sh
 cp -r sh/p10k.zsh $HOME/.config/sh
+
+
+if [ ! -d "$HOME/.config/nvim" ]; then
+	printf "\033[36mCreate .config/nvim !\033[0m\n"
+else
+	printf "\032[36mExisting .config/nvim !\033[0m\n"
+	printf "\033[36mMove .config/nvim to .config/nvim.backup!\033[0m\n"
+	mv $HOME/.config/nvim $HOME/.config/nvim.backup
+	cp -r nvim $HOME/.config
+fi
 
 exit 0;
