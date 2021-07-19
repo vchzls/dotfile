@@ -60,7 +60,7 @@ zinit lucid load'![[ $MYPROMPT = pure ]]' unload'![[ $MYPROMPT != pure ]]' \
 MYPROMPT=p10k
 
 if [[ $MYPROMPT = p10k ]]; then
-    source ~/.config/sh/p10k.zsh
+    source ~/.config/shell/p10k.zsh
 fi
 
 ## History file configuration
@@ -68,8 +68,8 @@ fi
 [ "$HISTSIZE" -lt 5000 ] && HISTSIZE=5000
 [ "$SAVEHIST" -lt 5000 ] && SAVEHIST=5000
 
-source ~/.config/sh/python.sh
-source ~/.config/sh/aliases.sh
+source ~/.config/shell/python.sh
+source ~/.config/shell/aliases.sh
 export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 export LIBGL_ALWAYS_INDIRECT=1
 export GDK_SCALE=0.5
