@@ -23,13 +23,12 @@ local function let_options(options)
     end
 end
 
-vim.cmd('filetype plugin indent on') -- enable "detection", "plugin" and "indent"
-vim.cmd('syntax enable') -- enable syntax highlighting
+vim.cmd('filetype plugin on')
+vim.cmd('syntax enable')
 
 enable_options({
     'spell',
     'expandtab',
-    'autoindent',
     'termguicolors',
     'wildmenu', -- tabcomplete
     'list', -- show tabs and blankspace

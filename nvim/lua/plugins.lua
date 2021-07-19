@@ -14,6 +14,9 @@ return require('packer').startup({function()
     -- packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim'}
 
+    -- brackets maps
+    -- use 'tpope/vim-unimpaired'
+
     -- lsp
     use {"neovim/nvim-lspconfig"}
     use {"glepnir/lspsaga.nvim", config='require("lsp.saga")'}
@@ -27,6 +30,7 @@ return require('packer').startup({function()
     use {'SirVer/ultisnips'}
     use {'honza/vim-snippets'}
     use {'sillybun/zyt-snippet'}
+    -- TODO
     -- use {"windwp/nvim-autopairs", config='require("plugin_settings.autopairs")'}
     use {"windwp/nvim-autopairs", config='require("nvim-autopairs").setup()'}
     use {
