@@ -4,7 +4,7 @@ sudo sed -i "s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn/
 sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn/ubuntu/@g" /etc/apt/sources.list
 sudo apt update
 sudo apt upgrade
-sudo apt install git curl
+sudo apt install git curl tmux
 
 ## nodejs
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
